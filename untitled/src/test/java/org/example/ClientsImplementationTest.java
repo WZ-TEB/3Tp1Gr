@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ClientsImplementationTest {
-    private static final ClientsImplementation CLIENTS_IMPLEMENTATION_TEST = new ClientsImplementation();
+    private static final ClientsImplementation testClientsImplementation = new ClientsImplementation();
 
     @Test
     void createNewClient() {
         //given
         ArrayList<Client> testArrayList = new ArrayList<>();
         //when
-        CLIENTS_IMPLEMENTATION_TEST.createNewClient("testFirstName","testLastName");
+        testClientsImplementation.createNewClient("testFirstName","testLastName");
         //then
-        assertEquals(1, CLIENTS_IMPLEMENTATION_TEST.getNumberOfClients());
+        assertEquals(1, testClientsImplementation.getNumberOfClients());
     }
 
     @Test

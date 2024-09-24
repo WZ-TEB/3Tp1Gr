@@ -7,11 +7,10 @@ public class ClientsImplementation implements Clients {
     public ArrayList<Client> clientArrayList = new ArrayList<>();
 
     @Override
-    public String createNewClient(String firstName, String lastName) {
+    public void createNewClient(String firstName, String lastName) {
         Client client = new Client(firstName, lastName);
         clientArrayList.add(client);
         client.setClientId(clientArrayList.size());
-        return null;
     }
 
     @Override
@@ -25,11 +24,11 @@ public class ClientsImplementation implements Clients {
     }
 
     @Override
-    public String activatePremiumAccount(int clientId) {
+    public void activatePremiumAccount(int clientId) {
         Client client = clientArrayList.get(clientId);
         client.setPremium(true);
         clientArrayList.set(clientId, client);
-        return "Client Premium status set to true";
+        System.out.println("Client Premium status set to true");
     }
 
     @Override
